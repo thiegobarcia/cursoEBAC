@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pq-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML -JS</title>
+    <title>minha</title>
     <link rel="stylesheet" href="./main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');</style>
 </head>
 <body>
     <div class="container">
-        <h1>VALIDAÇÃO</h1>
-        <form id="form" >
-            <p>Valor A:
-            <input type="number" id="campoA" placeholder="Valor A" />
-            </p>
-            <p>
-            Valor B:
-            <input type="number" id="campoB" placeholder="Valor B" />
-            </p>
-            <button type="submit">ENVIAR</button>
-            <p class="pRes" id="resposta"></p>
+        <h1>lista de tarefas</h1>
+        <form id="form">
+            <input id="taskInput" type="text" placeholder="digite a tarefa a ser listada" autocomplete="off">
+            <button type="submit" id="addButton">adicionar</button>
         </form>
+            <ul>
+            </ul>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

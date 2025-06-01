@@ -1,30 +1,22 @@
-function validar(event) {
-    event.preventDefault();
-    
-    let campoA = document.getElementById("campoA").value.trim()
-    let campoB = document.getElementById("campoB").value.trim()
-
-    const resultado = document.getElementById("resposta")
-    const inputs = document.querySelectorAll("#form input")
-    
-    campoA = Number(campoA);
-    campoB = Number(campoB);
-    
-    if( campoA === campoB) {
-        resultado.textContent = "B = A"
-        resultado.style.color = "#FF0000"
-
-    } else if(campoA < campoB) {
-        resultado.textContent = "B > A"
-        resultado.style.color = "#007d00"
-    } else {
-        resultado.textContent = "B < A"
-        resultado.style.color = "#FF0000"
-        
+$(document).ready(function(){
+    function taskAdd() {
+        var input = $('#taskInput').val().trim();
+        if (input) {
+            $('ul').append(`<li>${input} <i class="fas fa-check"></i> <i class="fas fa-trash"></i></li>`);
+            $('#taskInput').val('');
+        }
     }
 
-    inputs.forEach(input => input.value = "")
-    document.getElementById("campoA").focus();
+    $('#form').submit(function(event){
+        event.preventDefault();
+        taskAdd();
+    });
 
-}
-document.getElementById("form").addEventListener("submit", validar);
+    $('ul').on('click', '.fa-trash', function(){
+        $(this).parent('li').fadeOut(300, function() { $(this).remove(); });
+    });
+
+    $('ul').on('click', '.fa-check', function(){
+        $(this).parent('li').toggleClass('checked');
+    });
+});

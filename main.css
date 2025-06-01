@@ -1,56 +1,89 @@
 * {
-    margin: auto;
-    padding: auto;
-    text-align: center;
-    background-color:rgb(255, 145, 0)
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
-    font-family: "Permanent Marker", cursive;
-}
-
-#form {
-    font-family: "Goldman", sans-serif;
-    justify-content: center;
-    display: block;
-    width: 500px;
-    padding: 8px;
-    font-size: 20px;
-    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredericka the Great", serif;
     text-transform: uppercase;
 }
 
-#form input {
-    font-size: 20px;
-    border-radius: 5px;
-    width: 85px;
-    height: 25px;
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.container {
+    background-image: url(./lousa.jpg);
+    box-shadow: 12px 12px 12px 0 black;
+    height: 500px;
+    border-radius: 10px;
+    padding: 16px;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 100;
+}
+
+form {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    padding-left: 5px;
+    width: 400px;
+    height: 20px;
+    box-shadow: inset 0 0 2px 0 black;
     border: none;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 5px;
+    border-radius: 5px;
+    color: black;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 400;
+    outline: none;
+    background: antiquewhite;
 }
 
 button {
-    height: 25px;
-    width: 85px;
-    padding: 3px;
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    background-color: green;
+    font-family: "Fredericka the Great", serif;
+    background: none;
     border: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    color: rgb(0, 255, 0);
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 100;
 }
 
-.pRes {
-    display: block;
-    align-items: center;
-    margin: auto 0;
+ul li {
+    padding-bottom: 3px;
+    font-weight: 100;
+    list-style: none;
+    position: relative;
+}
+
+ul .fa-check, .fa-trash {
+    cursor: pointer;
+    position: absolute;
+}
+
+ul .fa-check {
+    right: 40px;
+    color: rgb(0, 255, 0);
+}
+
+ul .fa-trash {
+    right: 10px;
+    color: red;
+}
+
+ul .checked {
+    text-decoration: line-through;
+    color: rgb(0, 255, 0);
 }
